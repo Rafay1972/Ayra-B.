@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayra B. — Premium Ladies Suits</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#B8935A;--gold-l:#F5ECD9;--gold-d:#7A5C2E;--rose:#C97B8A;--blush:#FCF5F2;--deep:#18120E;--text:#1C1410;--mut:#7A6A60;--brd:#E8DDD5;--wh:#fff;--surf:#FAF7F4}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--wh);overflow-x:hidden}
+.page{display:none}.page.active{display:block}
+
+/* NAV */
+nav{background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:300}
+.nav-wrap{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:68px;gap:2rem}
+.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;letter-spacing:2px;color:var(--text);cursor:pointer;white-space:nowrap}
+.logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:1.75rem;list-style:none;flex:1;justify-content:center}
+.nav-links a{text-decoration:none;color:var(--mut);font-size:12px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:color .2s;text-transform:uppercase}
+.nav-links a:hover{color:var(--gold)}
+.nav-cart{position:relative;background:transparent;border:1.5px solid var(--brd);padding:8px 16px;border-radius:25px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--text);display:flex;align-items:center;gap:.4rem}
+.nav-cart:hover{border-color:var(--gold);color:var(--gold)}
+.cart-count{position:absolute;top:-6px;right:-6px;background:var(--gold);color:#fff;font-size:9px;font-weight:800;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* OFFER BAR */
+.offer-bar{background:var(--deep);color:#fff;text-align:center;padding:10px 1rem;font-size:12px;letter-spacing:.5px}
+.offer-bar strong{color:var(--gold)}
+
+/* SLIDER */
+.sl-wrap{position:relative;overflow:hidden;background:#111}
+.sl-track{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.sl-slide{min-width:100%;position:relative;overflow:hidden;height:600px}
+.sl-slide img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.sl-grad{position:absolute;inset:0;background:linear-gradient(to right,rgba(18,10,5,.82) 0%,rgba(18,10,5,.35) 55%,rgba(18,10,5,.1) 100%)}
+.sl-text{position:absolute;top:50%;left:8%;transform:translateY(-50%);color:#fff;max-width:480px}
+.sl-tag{display:inline-block;background:var(--gold);color:#fff;font-size:10px;font-weight:700;padding:5px 16px;border-radius:20px;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem}
+.sl-text h1{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;line-height:1.12;margin-bottom:.9rem}
+.sl-text p{font-size:15px;line-height:1.8;color:rgba(255,255,255,.78);margin-bottom:2rem}
+.sl-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.sl-btn-p{background:var(--gold);color:#fff;border:none;padding:13px 28px;border-radius:30px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.sl-btn-p:hover{background:var(--gold-d);transform:translateY(-2px)}
+.sl-btn-o{background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.6);padding:13px 28px;border-radius:30px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+.sl-btn-o:hover{border-color:#fff;background:rgba(255,255,255,.2)}
+.sl-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:24px;transition:all .2s;z-index:10}
+.sl-arr:hover{background:rgba(255,255,255,.3)}
+.sl-arr.p{left:18px}.sl-arr.n{right:18px}
+.sl-dots{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+.sl-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.38);cursor:pointer;transition:all .35s}
+.sl-dot.on{background:#fff;width:26px;border-radius:4px}
+
+/* SECTION */
+.sec-head{text-align:center;margin-bottom:3rem}
+.sec-tag{display:block;font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:700;margin-bottom:.65rem}
+.sec-head h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700}
+.sec-div{width:52px;height:2px;background:var(--gold);margin:.9rem auto 0}
+
+/* PRODUCTS */
+.prod-sec{background:var(--surf);padding:72px 2rem}
+.prod-wrap{max-width:1280px;margin:0 auto}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.75rem}
+.pcard{background:var(--wh);border-radius:18px;overflow:hidden;border:1px solid var(--brd);cursor:pointer;transition:all .32s}
+.pcard:hover{transform:translateY(-7px);box-shadow:0 22px 52px rgba(28,20,16,.1)}
+.pcard-img{position:relative;overflow:hidden;height:340px}
+.pcard-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .55s ease}
+.pcard:hover .pcard-img img{transform:scale(1.06)}
+.pbadge{position:absolute;top:12px;left:12px;font-size:9px;font-weight:800;padding:4px 11px;border-radius:20px;text-transform:uppercase;letter-spacing:.8px}
+.pb-sale{background:#C0392B;color:#fff}
+.pb-new{background:var(--gold);color:#fff}
+.pcard-body{padding:1.15rem 1.25rem}
+.pcard-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;margin-bottom:2px;line-height:1.2}
+.pcard-cat{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px;margin-bottom:.65rem}
+.pstars{display:flex;align-items:center;gap:.35rem;margin-bottom:.65rem}
+.stars{color:#F59E0B;font-size:12px;letter-spacing:1.5px}
+.scount{font-size:11px;color:var(--mut)}
+.pprices{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.9rem}
+.pc{font-size:18px;font-weight:700}
+.po{font-size:13px;color:var(--mut);text-decoration:line-through}
+.pbtns{display:flex;gap:.5rem}
+.btn-cart{background:var(--deep);color:#fff;border:none;padding:9px 14px;border-radius:22px;font-size:11px;font-weight:700;cursor:pointer;flex:1;transition:all .2s}
+.btn-cart:hover{background:var(--gold-d)}
+.btn-fav{background:transparent;border:1.5px solid var(--brd);padding:9px 12px;border-radius:22px;cursor:pointer;color:var(--rose);font-size:14px;transition:all .2s}
+.btn-fav:hover{background:#FFF0F4;border-color:var(--rose)}
+
+/* CAT TILES */
+.cat-sec{padding:72px 2rem;background:var(--wh)}
+.cat-wrap{max-width:1280px;margin:0 auto}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.25rem}
+.cat-tile{position:relative;border-radius:18px;overflow:hidden;height:270px;cursor:pointer;transition:all .3s}
+.cat-tile img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .55s}
+.cat-tile:hover img{transform:scale(1.08)}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(18,10,5,.82) 0%,rgba(18,10,5,.1) 60%,transparent 100%)}
+.cat-txt{position:absolute;bottom:16px;left:16px;right:16px;color:#fff}
+.cat-txt h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;margin-bottom:2px}
+.cat-txt span{font-size:11px;color:rgba(255,255,255,.65)}
+.cat-shop-btn{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border:none;color:#fff;padding:6px 14px;border-radius:20px;font-size:11px;cursor:pointer;transition:all .2s;font-weight:600}
+.cat-tile:hover .cat-shop-btn{background:var(--gold)}
+
+/* CART DRAWER */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;display:none;opacity:0;transition:opacity .3s}
+.cart-overlay.open{display:block;opacity:1}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:420px;max-width:95vw;background:#fff;z-index:501;transform:translateX(100%);transition:transform .38s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-12px 0 48px rgba(0,0,0,.12)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-dhead{padding:1.5rem;border-bottom:1px solid var(--brd);display:flex;justify-content:space-between;align-items:center}
+.cart-dhead h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}
+.cart-close{background:transparent;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.cart-items{flex:1;overflow-y:auto;padding:1.25rem}
+.cart-empty{text-align:center;padding:3rem 1rem;color:var(--mut)}
+.citem{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--brd)}
+.citem:last-child{border-bottom:none}
+.citem img{width:70px;height:80px;object-fit:cover;object-position:top;border-radius:10px;flex-shrink:0}
+.citem-info{flex:1}
+.citem-name{font-size:13px;font-weight:600;margin-bottom:2px;line-height:1.3}
+.citem-cat{font-size:11px;color:var(--mut);margin-bottom:.4rem}
+.citem-price{font-size:14px;font-weight:700;color:var(--gold)}
+.citem-del{background:transparent;border:none;color:#C0392B;font-size:20px;cursor:pointer;flex-shrink:0;align-self:flex-start;padding:2px 6px}
+.cart-footer{padding:1.5rem;border-top:1px solid var(--brd)}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
+.cart-total-label{font-size:14px;color:var(--mut)}
+.cart-total-val{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700}
+.cart-wa-btn{width:100%;background:#25D366;color:#fff;border:none;padding:15px;border-radius:30px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.75rem}
+.cart-wa-btn:hover{background:#128C7E}
+.cart-note{font-size:11px;color:var(--mut);text-align:center;margin-top:.65rem;line-height:1.6}
+
+/* DETAIL PAGE */
+.det-page{background:var(--wh)}
+.breadcrumb{background:var(--surf);padding:13px 2rem;border-bottom:1px solid var(--brd)}
+.bc-inner{max-width:1280px;margin:0 auto;font-size:12px;color:var(--mut)}
+.bc-inner a{cursor:pointer;transition:color .2s}.bc-inner a:hover{color:var(--gold)}
+.det-body{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4.5rem}
+.det-imgs .main-img{width:100%;height:480px;object-fit:cover;object-position:top center;border-radius:18px;margin-bottom:.8rem;transition:opacity .25s}
+.thumb-row{display:flex;gap:.65rem}
+.thumb{width:80px;height:90px;object-fit:cover;object-position:top;border-radius:10px;cursor:pointer;border:2.5px solid transparent;transition:all .22s;opacity:.7}
+.thumb:hover{opacity:1}
+.thumb.on{border-color:var(--gold);opacity:1}
+.det-info{padding-top:.5rem}
+.det-badge{display:inline-block;font-size:10px;font-weight:800;padding:5px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:1px;margin-bottom:1.1rem}
+.det-name{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;line-height:1.15;margin-bottom:.5rem}
+.det-cat-tag{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.1rem}
+.det-rating{display:flex;align-items:center;gap:.6rem;margin-bottom:1.4rem}
+.det-stars{color:#F59E0B;font-size:17px;letter-spacing:2px}
+.det-rc{font-size:13px;color:var(--mut)}
+.det-price{display:flex;align-items:baseline;gap:.8rem;margin-bottom:1.6rem}
+.dp-cur{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700}
+.dp-old{font-size:17px;color:var(--mut);text-decoration:line-through}
+.det-desc{font-size:14px;line-height:1.95;color:var(--mut);border-top:1px solid var(--brd);padding-top:1.3rem;margin-bottom:1.6rem}
+.det-feats{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-bottom:1.8rem}
+.det-feat{display:flex;align-items:center;gap:.5rem;font-size:13px}
+.feat-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.det-actions{display:flex;flex-direction:column;gap:.8rem}
+.btn-add-cart{background:var(--deep);color:#fff;border:none;padding:15px 24px;border-radius:32px;font-size:15px;font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.btn-add-cart:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-wa-det{background:#25D366;color:#fff;border:none;padding:15px 24px;border-radius:32px;font-size:15px;font-weight:700;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.btn-wa-det:hover{background:#128C7E}
+.btn-wish-det{background:var(--blush);color:var(--rose);border:1.5px solid var(--brd);padding:13px 24px;border-radius:32px;font-size:14px;font-weight:600;cursor:pointer;transition:all .22s}
+.det-meta{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid var(--brd)}
+.dm{font-size:12px}.dm span{color:var(--mut);display:block;margin-bottom:1px}.dm strong{font-size:13px;font-weight:600}
+
+/* REVIEWS */
+.rev-sec{max-width:1280px;margin:0 auto;padding:1.5rem 2rem 3rem}
+.rev-h{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;margin-bottom:1.5rem;padding-top:2rem;border-top:1px solid var(--brd)}
+.rcard{background:var(--surf);border:1px solid var(--brd);border-radius:14px;padding:1.25rem 1.4rem;margin-bottom:1rem}
+.rtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.rname{font-size:14px;font-weight:700}.rdate{font-size:11px;color:var(--mut)}
+.rstars{color:#F59E0B;font-size:13px;margin-bottom:.5rem}
+.rtxt{font-size:13px;color:var(--mut);line-height:1.75}
+
+/* RELATED */
+.rel-sec{background:var(--surf);padding:52px 2rem}
+.rel-inner{max-width:1280px;margin:0 auto}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem}
+
+/* WA CTA */
+.wa-cta{background:var(--deep);padding:80px 2rem;text-align:center}
+.wa-cta h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:#fff;margin-bottom:1rem}
+.wa-cta p{color:rgba(255,255,255,.55);font-size:15px;max-width:500px;margin:0 auto 1.75rem;line-height:1.9}
+.wa-ph{font-size:26px;font-weight:700;color:var(--gold);margin-bottom:2rem}
+.wa-big{background:#25D366;color:#fff;border:none;padding:18px 46px;border-radius:40px;font-size:17px;font-weight:700;cursor:pointer;transition:all .25s}
+.wa-big:hover{background:#128C7E;transform:translateY(-3px)}
+
+/* SOCIAL */
+.soc-sec{padding:64px 2rem;text-align:center;background:var(--surf)}
+.soc-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.soc-btn{display:flex;align-items:center;gap:.5rem;padding:13px 24px;border-radius:30px;border:1.5px solid;font-size:14px;cursor:pointer;font-weight:500;transition:all .22s;background:transparent;font-family:'Inter',sans-serif}
+
+/* FOOTER */
+footer{background:var(--deep);color:#fff;padding:4.5rem 2rem 2rem}
+.foot-inner{max-width:1280px;margin:0 auto}
+.foot-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.5rem}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;letter-spacing:2px;margin-bottom:.8rem}
+.f-logo em{color:var(--gold);font-style:normal}
+.f-desc{font-size:13px;color:rgba(255,255,255,.42);line-height:1.85;margin-bottom:1.4rem}
+.f-soc{display:flex;gap:.5rem;flex-wrap:wrap}
+.f-soc-b{background:rgba(255,255,255,.07);border:none;color:rgba(255,255,255,.55);padding:8px 16px;border-radius:20px;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.f-soc-b:hover{background:var(--gold);color:#fff}
+.f-h{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:1.1rem}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.f-links a{color:rgba(255,255,255,.42);font-size:13px;text-decoration:none;cursor:pointer;transition:color .2s}
+.f-links a:hover{color:#fff}
+.f-bot{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.f-bot-t{font-size:11px;color:rgba(255,255,255,.28)}
+
+/* ADMIN */
+.login-wrap{min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;background:var(--surf);padding:2rem}
+.login-box{background:#fff;border:1px solid var(--brd);border-radius:22px;padding:3rem 2.5rem;width:380px;text-align:center;box-shadow:0 24px 72px rgba(28,20,16,.08)}
+.login-ico{width:74px;height:74px;background:var(--gold-l);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:30px}
+.login-box h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;margin-bottom:.4rem}
+.login-box p{font-size:13px;color:var(--mut);margin-bottom:2rem}
+.l-field input{width:100%;padding:12px 16px;border:1.5px solid var(--brd);border-radius:13px;font-size:14px;outline:none;font-family:'Inter',sans-serif;background:var(--surf);margin-bottom:.9rem}
+.l-field input:focus{border-color:var(--gold)}
+.l-btn{width:100%;background:var(--deep);color:#fff;border:none;padding:14px;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.l-btn:hover{background:var(--gold-d)}
+.l-err{color:#C0392B;font-size:12px;margin-top:.5rem;display:none}
+.l-back{background:transparent;border:none;color:var(--mut);font-size:12px;cursor:pointer;margin-top:1.4rem;font-family:'Inter',sans-serif}
+.adm-pg{background:#F6F2EE;min-height:calc(100vh - 68px)}
+.adm-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+.adm-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+.adm-top h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700}
+.adm-top-r{display:flex;gap:.6rem}
+.a-logout{background:#fee2e2;color:#b91c1c;border:none;padding:9px 18px;border-radius:22px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+.a-view{background:var(--deep);color:#fff;border:none;padding:9px 18px;border-radius:22px;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif}
+.adm-grid{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;align-items:start}
+.adm-sidebar{background:#fff;border:1px solid var(--brd);border-radius:18px;overflow:hidden;position:sticky;top:84px}
+.a-sb-h{padding:1rem 1.25rem .75rem;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--mut);border-bottom:1px solid var(--brd)}
+.a-nav{display:flex;align-items:center;gap:.55rem;padding:11px 1.25rem;font-size:13px;font-weight:500;cursor:pointer;color:var(--mut);transition:all .2s;border-left:3px solid transparent}
+.a-nav:hover{background:var(--surf);color:var(--text)}
+.a-nav.on{background:var(--gold-l);color:var(--gold-d);border-left-color:var(--gold)}
+.adm-content{background:#fff;border:1px solid var(--brd);border-radius:18px;padding:1.75rem;min-height:520px}
+.a-panel{display:none}.a-panel.on{display:block}
+.a-ph{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--brd)}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--mut);margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 14px;border:1.5px solid var(--brd);border-radius:11px;font-size:13px;outline:none;font-family:'Inter',sans-serif;color:var(--text);background:var(--surf)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg textarea{height:75px;resize:vertical}
+.a-save{background:var(--deep);color:#fff;border:none;padding:11px 26px;border-radius:22px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.a-save:hover{background:var(--gold-d)}
+.prod-mgmt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:1rem;margin-bottom:1.5rem}
+.pmcard{background:var(--surf);border:1.5px solid var(--brd);border-radius:14px;overflow:hidden}
+.pmcard img{width:100%;height:130px;object-fit:cover;object-position:top}
+.pmcard-info{padding:.7rem}
+.pmcard-name{font-size:12px;font-weight:700;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pmcard-price{font-size:12px;color:var(--gold);font-weight:600;margin-bottom:.5rem}
+.pmcard-btns{display:flex;gap:.35rem}
+.pm-edit{background:var(--gold-l);color:var(--gold-d);border:none;padding:4px 10px;border-radius:7px;font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;flex:1}
+.pm-del{background:#fee2e2;color:#b91c1c;border:none;padding:4px 10px;border-radius:7px;font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+.modal-over{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:600;display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-over.open{display:flex}
+.modal{background:#fff;border-radius:20px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;padding:2rem}
+.modal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--brd)}
+.modal-h h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}
+.modal-close{background:transparent;border:none;font-size:26px;cursor:pointer;color:var(--mut)}
+.img-upload-area{border:2px dashed var(--brd);border-radius:12px;padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s;background:var(--surf)}
+.img-upload-area:hover{border-color:var(--gold);background:var(--gold-l)}
+.img-upload-area input{display:none}
+.img-preview-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.img-prev-item{position:relative;width:75px;height:80px}
+.img-prev-item img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:9px}
+.img-prev-del{position:absolute;top:-5px;right:-5px;background:#C0392B;color:#fff;border:none;border-radius:50%;width:18px;height:18px;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cat-list-a{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
+.cat-row-a{display:flex;align-items:center;gap:.75rem;padding:10px 14px;background:var(--surf);border:1px solid var(--brd);border-radius:11px}
+.cat-row-a span{font-size:13px;font-weight:500;flex:1}
+.del-btn{background:#fee2e2;color:#b91c1c;border:none;padding:5px 11px;border-radius:8px;font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+.add-row{display:flex;gap:.5rem}
+.add-row input{flex:1;padding:9px 13px;border:1.5px solid var(--brd);border-radius:11px;font-size:13px;outline:none;font-family:'Inter',sans-serif;background:var(--surf)}
+.add-row input:focus{border-color:var(--gold)}
+.add-row button{background:var(--gold);color:#fff;border:none;padding:9px 18px;border-radius:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap}
+.slide-admin-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem}
+.slide-a-item{display:flex;align-items:center;gap:.9rem;padding:.9rem;background:var(--surf);border:1px solid var(--brd);border-radius:12px}
+.slide-a-item img{width:80px;height:55px;object-fit:cover;object-position:top;border-radius:8px}
+.slide-a-info{flex:1}
+.slide-a-title{font-size:13px;font-weight:700;margin-bottom:2px}
+.slide-a-sub{font-size:11px;color:var(--mut)}
+.slide-edit-btn{background:var(--gold-l);color:var(--gold-d);border:none;padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+.tog-row{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--brd)}
+.tog-row:last-child{border-bottom:none}
+.tog-lbl{font-size:13px;font-weight:500}
+.tog{width:44px;height:25px;background:#ddd;border-radius:13px;cursor:pointer;position:relative;transition:background .25s;flex-shrink:0}
+.tog.on{background:#25D366}
+.tog::after{content:'';position:absolute;top:3.5px;left:3.5px;width:18px;height:18px;background:#fff;border-radius:50%;transition:left .25s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.tog.on::after{left:22.5px}
+
+/* NOTIF */
+.notif{position:fixed;bottom:1.75rem;right:1.75rem;padding:13px 22px;border-radius:14px;font-size:13px;font-weight:600;z-index:9999;transform:translateY(70px);opacity:0;transition:all .35s;max-width:290px;color:#fff;box-shadow:0 8px 28px rgba(0,0,0,.15)}
+.notif.show{transform:translateY(0);opacity:1}
+.notif.ok{background:#25D366}
+.notif.err{background:#C0392B}
+.notif.info{background:var(--deep)}
+
+/* IMG FALLBACK */
+img.error-hide{opacity:0}
+</style>
+</head>
+<body>
+
+<div class="notif" id="notif"></div>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-dhead">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">&#215;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span class="cart-total-label">Total Amount</span>
+      <span class="cart-total-val" id="cartTotal">Rs. 0</span>
+    </div>
+    <button class="cart-wa-btn" onclick="checkoutWA()">
+      &#128519; Send Order to WhatsApp
+    </button>
+    <p class="cart-note">Your complete order will be sent as a WhatsApp message. We'll confirm and arrange fast delivery.</p>
+  </div>
+</div>
+
+<!-- EDIT PRODUCT MODAL -->
+<div class="modal-over" id="editModal">
+  <div class="modal">
+    <div class="modal-h">
+      <h3 id="modalTitle">Edit Product</h3>
+      <button class="modal-close" onclick="closeModal()">&#215;</button>
+    </div>
+    <div class="fg"><label>Product Name</label><input type="text" id="mName" placeholder="e.g. Pink Floral Lawn 3-Piece"></div>
+    <div class="fg"><label>Category</label><select id="mCat"></select></div>
+    <div class="fg"><label>Sale Price (e.g. Rs. 2800)</label><input type="text" id="mPrice" placeholder="Rs. 2,800"></div>
+    <div class="fg"><label>Original Price — leave empty if no discount</label><input type="text" id="mOld" placeholder="Rs. 3,500"></div>
+    <div class="fg"><label>Badge</label><select id="mBadge"><option value="new">New Arrival</option><option value="sale">On Sale</option></select></div>
+    <div class="fg"><label>Description</label><textarea id="mDesc" placeholder="Describe the suit fabric, style, occasion..."></textarea></div>
+    <div class="fg">
+      <label>Product Images — Upload Multiple (first image shown as main)</label>
+      <div class="img-preview-row" id="mImgPrev"></div>
+      <div class="img-upload-area" onclick="document.getElementById('mImgInput').click()">
+        <div style="font-size:32px;margin-bottom:.5rem">&#128247;</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Click to Upload Photos</div>
+        <div style="font-size:11px;color:var(--mut)">Select multiple images at once — JPG, PNG, WEBP</div>
+        <input type="file" id="mImgInput" multiple accept="image/*" onchange="handleImgUpload(event)">
+      </div>
+    </div>
+    <div style="display:flex;gap:.75rem;margin-top:.75rem">
+      <button class="a-save" style="flex:1" onclick="saveProduct()">&#10003; Save Product</button>
+      <button onclick="closeModal()" style="flex:1;background:var(--surf);color:var(--text);border:1.5px solid var(--brd);padding:11px 26px;border-radius:22px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE EDIT MODAL -->
+<div class="modal-over" id="slideModal">
+  <div class="modal">
+    <div class="modal-h">
+      <h3>Edit Slide</h3>
+      <button class="modal-close" onclick="closeSlideModal()">&#215;</button>
+    </div>
+    <div class="fg"><label>Slide Title</label><input type="text" id="sTitle"></div>
+    <div class="fg"><label>Slide Description</label><textarea id="sDesc"></textarea></div>
+    <div class="fg"><label>Button Label</label><input type="text" id="sBtnTxt"></div>
+    <div class="fg"><label>Links To Category</label><select id="sCatLink"></select></div>
+    <div class="fg">
+      <label>Slide Image — Upload Your Own</label>
+      <div id="sCurImg" style="margin-bottom:.6rem"></div>
+      <div class="img-upload-area" onclick="document.getElementById('sImgIn').click()">
+        <div style="font-size:32px;margin-bottom:.5rem">&#128247;</div>
+        <div style="font-size:13px;font-weight:700">Upload Slide Image</div>
+        <div style="font-size:11px;color:var(--mut)">Recommended: wide landscape photo (1400×600px)</div>
+        <input type="file" id="sImgIn" accept="image/*" onchange="handleSlideImg(event)">
+      </div>
+    </div>
+    <button class="a-save" style="width:100%;margin-top:.5rem" onclick="saveSlide()">&#10003; Save Slide</button>
+  </div>
+</div>
+
+<!-- ===== MAIN PAGE ===== -->
+<div class="page active" id="mainPage">
+  <nav>
+    <div class="nav-wrap">
+      <div class="logo" onclick="goHome()">Ayra <em>B.</em></div>
+      <ul class="nav-links">
+        <li><a onclick="sTo('prods')">Collection</a></li>
+        <li><a onclick="sTo('cats')">Categories</a></li>
+        <li><a onclick="sTo('offerBar')">Offers</a></li>
+        <li><a onclick="sTo('footer')">Contact</a></li>
+      </ul>
+      <button class="nav-cart" onclick="openCart()">
+        &#128722; Cart
+        <span class="cart-count" id="cartCount" style="display:none">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="offer-bar" id="offerBar">
+    <span id="offerTxt">&#10024; Eid Special Sale — <strong>20% OFF</strong> on All Collections &nbsp;|&nbsp; Code: <strong>AYRA20</strong> &nbsp;|&nbsp; Free Delivery above Rs. 2,000</span>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="sl-wrap">
+    <div class="sl-track" id="slTrack"></div>
+    <button class="sl-arr p" onclick="chSlide(-1)">&#8249;</button>
+    <button class="sl-arr n" onclick="chSlide(1)">&#8250;</button>
+    <div class="sl-dots" id="slDots"></div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="prod-sec" id="prods">
+    <div class="prod-wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Featured Collection</span>
+        <h2>Our Latest Suits</h2>
+        <div class="sec-div"></div>
+      </div>
+      <div class="prod-grid" id="prodGrid"></div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="cat-sec" id="cats">
+    <div class="cat-wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Browse By Style</span>
+        <h2>Shop by Category</h2>
+        <div class="sec-div"></div>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- WA CTA -->
+  <section class="wa-cta">
+    <span class="sec-tag" style="display:block;margin-bottom:.75rem">Easy Ordering</span>
+    <h2>Order Directly on WhatsApp</h2>
+    <p>Choose your favourite suit and message us. Fast delivery, easy returns, best prices guaranteed.</p>
+    <div class="wa-ph" id="ctaPhone">+92 331 7448054</div>
+    <button class="wa-big" onclick="openWA('')">&#128519; WhatsApp Order Now</button>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="soc-sec">
+    <span class="sec-tag">Stay Connected</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;margin-top:.5rem">Follow Us on Social Media</h2>
+    <div class="soc-btns">
+      <button class="soc-btn" style="border-color:#E1306C;color:#E1306C" onmouseover="this.style.background='#E1306C';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#E1306C'" onclick="goSoc('insta')">&#128247; Instagram</button>
+      <button class="soc-btn" style="border-color:#1877F2;color:#1877F2" onmouseover="this.style.background='#1877F2';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1877F2'" onclick="goSoc('fb')">&#128077; Facebook</button>
+      <button class="soc-btn" style="border-color:#333;color:#333" onmouseover="this.style.background='#333';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#333'" onclick="goSoc('tiktok')">&#127925; TikTok</button>
+      <button class="soc-btn" style="border-color:#c8b800;color:#6B5900" onmouseover="this.style.background='#f5e800';this.style.color='#333'" onmouseout="this.style.background='transparent';this.style.color='#6B5900'" onclick="goSoc('snap')">&#128123; Snapchat</button>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="foot-inner">
+      <div class="foot-grid">
+        <div>
+          <div class="f-logo">Ayra <em>B.</em></div>
+          <p class="f-desc">Pakistan's premium ladies suit boutique — curating the finest lawn, chiffon, silk and embroidered collections for the modern Pakistani woman.</p>
+          <div class="f-soc">
+            <button class="f-soc-b" onclick="goSoc('insta')">Instagram</button>
+            <button class="f-soc-b" onclick="goSoc('fb')">Facebook</button>
+            <button class="f-soc-b" onclick="goSoc('tiktok')">TikTok</button>
+          </div>
+        </div>
+        <div>
+          <div class="f-h">Collections</div>
+          <ul class="f-links">
+            <li><a onclick="filterCat('All')">All Suits</a></li>
+            <li><a onclick="filterCat('Lawn')">Lawn Suits</a></li>
+            <li><a onclick="filterCat('Chiffon')">Chiffon & Silk</a></li>
+            <li><a onclick="filterCat('Embroidered')">Embroidered</a></li>
+            <li><a onclick="filterCat('Formal')">Party Wear</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="f-h">Information</div>
+          <ul class="f-links">
+            <li><a>How to Order</a></li>
+            <li><a>Delivery Policy</a></li>
+            <li><a>Return & Exchange</a></li>
+            <li><a>Size Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="f-h">Contact Us</div>
+          <ul class="f-links">
+            <li><a id="fPhone">+92 331 7448054</a></li>
+            <li><a>Lahore, Pakistan</a></li>
+            <li><a>ayrab.official@gmail.com</a></li>
+          </ul>
+          <div style="margin-top:1.5rem">
+            <button onclick="showPage('loginPage')" style="background:rgba(255,255,255,.07);border:none;color:rgba(255,255,255,.38);padding:8px 16px;border-radius:20px;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.38)'">&#9881; Admin Panel</button>
+          </div>
+        </div>
+      </div>
+      <div class="f-bot">
+        <span class="f-bot-t">&copy; 2025 Ayra B. Ladies Suits — All Rights Reserved</span>
+        <span class="f-bot-t">Made with &#10084;&#65039; in Pakistan</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ===== DETAIL PAGE ===== -->
+<div class="page" id="detPage">
+  <nav>
+    <div class="nav-wrap">
+      <div class="logo" onclick="goHome()">Ayra <em>B.</em></div>
+      <ul class="nav-links">
+        <li><a onclick="goHome()">Home</a></li>
+        <li><a onclick="goHome();setTimeout(()=>sTo('prods'),100)">Collection</a></li>
+      </ul>
+      <button class="nav-cart" onclick="openCart()">
+        &#128722; Cart
+        <span class="cart-count" id="cartCount2" style="display:none">0</span>
+      </button>
+    </div>
+  </nav>
+  <div class="det-page">
+    <div class="breadcrumb"><div class="bc-inner"><a onclick="goHome()">Home</a> &rsaquo; <a onclick="goHome();setTimeout(()=>sTo('prods'),100)">Collection</a> &rsaquo; <span id="detBread"></span></div></div>
+    <div class="det-body">
+      <div class="det-imgs">
+        <img id="mainImg" class="main-img" src="" alt="Product" onerror="this.src='https://placehold.co/600x480/F5ECD9/B8935A?text=Ayra+B.'">
+        <div class="thumb-row" id="thumbRow"></div>
+      </div>
+      <div class="det-info">
+        <span class="det-badge" id="detBadge">New</span>
+        <h1 class="det-name" id="detName"></h1>
+        <div class="det-cat-tag" id="detCatTag"></div>
+        <div class="det-rating"><span class="det-stars" id="detStars"></span><span class="det-rc" id="detRc"></span></div>
+        <div class="det-price"><span class="dp-cur" id="detPrice"></span><span class="dp-old" id="detOld"></span></div>
+        <p class="det-desc" id="detDesc"></p>
+        <div class="det-feats" id="detFeats"></div>
+        <div class="det-actions">
+          <button class="btn-add-cart" id="detCartBtn">&#128722; Add to Cart</button>
+          <button class="btn-wa-det" id="detWaBtn">&#128519; Order on WhatsApp</button>
+          <button class="btn-wish-det" onclick="toggleWish(this)">&#9825; Add to Wishlist</button>
+        </div>
+        <div class="det-meta" id="detMeta"></div>
+      </div>
+    </div>
+    <div class="rev-sec">
+      <h2 class="rev-h">Customer Reviews</h2>
+      <div id="revList"></div>
+    </div>
+    <section class="rel-sec">
+      <div class="rel-inner">
+        <div class="sec-head" style="text-align:left;margin-bottom:1.25rem">
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700">You May Also Like</h2>
+        </div>
+        <div class="rel-grid" id="relGrid"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ===== LOGIN PAGE ===== -->
+<div class="page" id="loginPage">
+  <nav><div class="nav-wrap"><div class="logo" onclick="goHome()">Ayra <em>B.</em></div><div></div><button onclick="goHome()" style="background:var(--surf);border:1.5px solid var(--brd);padding:9px 18px;border-radius:22px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif">&#8592; Back</button></div></nav>
+  <div class="login-wrap">
+    <div class="login-box">
+      <div class="login-ico">&#128274;</div>
+      <h2>Admin Login</h2>
+      <p>Enter your admin password to access the dashboard</p>
+      <div class="l-field"><input type="password" id="pwIn" placeholder="Enter password..." onkeydown="if(event.key==='Enter')chkPw()"></div>
+      <button class="l-btn" onclick="chkPw()">Login to Admin Panel</button>
+      <div class="l-err" id="pwErr">&#10060; Incorrect password. Please try again.</div>
+      <br><button class="l-back" onclick="goHome()">&#8592; Back to Website</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADMIN PAGE ===== -->
+<div class="page" id="adminPage">
+  <nav><div class="nav-wrap"><div class="logo">Ayra <em>B.</em></div><div style="font-size:12px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:1px">Admin Dashboard</div><div class="adm-top-r"><button onclick="logout()" class="a-logout">Logout</button><button onclick="goHome()" class="a-view">View Website</button></div></div></nav>
+  <div class="adm-pg">
+    <div class="adm-wrap">
+      <div class="adm-top"><h2>Dashboard</h2><div style="font-size:12px;color:var(--mut)">Manage your Ayra B. store</div></div>
+      <div class="adm-grid">
+        <div class="adm-sidebar">
+          <div class="a-sb-h">Admin Panel</div>
+          <div class="a-nav on" onclick="aTab(this,'tProds')">&#128247; Products</div>
+          <div class="a-nav" onclick="aTab(this,'tCats')">&#128196; Categories</div>
+          <div class="a-nav" onclick="aTab(this,'tSlide')">&#127775; Slideshow</div>
+          <div class="a-nav" onclick="aTab(this,'tPhone')">&#128241; WhatsApp</div>
+          <div class="a-nav" onclick="aTab(this,'tOffer')">&#127991; Offers</div>
+          <div class="a-nav" onclick="aTab(this,'tSoc')">&#128242; Social Media</div>
+          <div class="a-nav" onclick="aTab(this,'tPw')">&#128274; Password</div>
+          <div class="a-nav" onclick="aTab(this,'tSett')">&#9881; Settings</div>
+        </div>
+        <div class="adm-content">
+
+          <div class="a-panel on" id="tProds">
+            <div class="a-ph">Manage Products</div>
+            <div class="prod-mgmt-grid" id="adminProdGrid"></div>
+            <button class="a-save" onclick="openAddProduct()">+ Add New Product</button>
+          </div>
+
+          <div class="a-panel" id="tCats">
+            <div class="a-ph">Manage Categories</div>
+            <div class="cat-list-a" id="aCatList"></div>
+            <div style="margin-top:1rem">
+              <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--mut);margin-bottom:.55rem">Add New Category</div>
+              <div class="add-row">
+                <input type="text" id="nCatName" placeholder="Category name (e.g. Bridal Wear)">
+                <input type="text" id="nCatIco" placeholder="Emoji" style="width:80px">
+                <button onclick="addCat()">+ Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="a-panel" id="tSlide">
+            <div class="a-ph">Manage Slideshow</div>
+            <p style="font-size:13px;color:var(--mut);margin-bottom:1.25rem">Edit slide content and upload your own fashion photos.</p>
+            <div class="slide-admin-list" id="slideAdminList"></div>
+          </div>
+
+          <div class="a-panel" id="tPhone">
+            <div class="a-ph">WhatsApp Settings</div>
+            <div class="fg"><label>WhatsApp Number</label><input type="tel" id="aPhone" value="+92 331 7448054"></div>
+            <div class="fg"><label>Default Order Message</label><textarea id="aMsg">Hello! I'd like to place an order from Ayra B. Please share details.</textarea></div>
+            <button class="a-save" onclick="savePhone()">Save Settings</button>
+          </div>
+
+          <div class="a-panel" id="tOffer">
+            <div class="a-ph">Offer Banner</div>
+            <div class="fg"><label>Offer Text</label><input type="text" id="aOfferTxt" value="Eid Special Sale — 20% OFF on All Collections | Code: AYRA20"></div>
+            <div class="fg"><label>Banner Color</label>
+              <select id="aOfferClr">
+                <option value="#18120E">Deep Brown (Default)</option>
+                <option value="#7A5C2E">Gold Brown</option>
+                <option value="#8B2252">Deep Rose</option>
+                <option value="#1B4D3E">Forest Green</option>
+                <option value="#1A237E">Royal Blue</option>
+              </select>
+            </div>
+            <button class="a-save" onclick="saveOffer()">Save Offer</button>
+          </div>
+
+          <div class="a-panel" id="tSoc">
+            <div class="a-ph">Social Media Links</div>
+            <div class="fg"><label>Instagram URL</label><input type="url" id="sInsta" placeholder="https://instagram.com/yourpage"></div>
+            <div class="fg"><label>Facebook URL</label><input type="url" id="sFb" placeholder="https://facebook.com/yourpage"></div>
+            <div class="fg"><label>TikTok URL</label><input type="url" id="sTt" placeholder="https://tiktok.com/@yourpage"></div>
+            <div class="fg"><label>Snapchat Username</label><input type="text" id="sSn" placeholder="@yourpage"></div>
+            <button class="a-save" onclick="saveSoc()">Save Links</button>
+          </div>
+
+          <div class="a-panel" id="tPw">
+            <div class="a-ph">Change Password</div>
+            <div class="fg"><label>Current Password</label><input type="password" id="oPw"></div>
+            <div class="fg"><label>New Password</label><input type="password" id="nPw1"></div>
+            <div class="fg"><label>Confirm New Password</label><input type="password" id="nPw2"></div>
+            <button class="a-save" onclick="changePw()">&#128274; Change Password</button>
+          </div>
+
+          <div class="a-panel" id="tSett">
+            <div class="a-ph">Website Settings</div>
+            <div class="tog-row"><span class="tog-lbl">Show Offer Banner</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="tog-row"><span class="tog-lbl">Auto-play Slideshow</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="tog-row"><span class="tog-lbl">Show Wishlist Button</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="tog-row"><span class="tog-lbl">Show Star Ratings</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="tog-row"><span class="tog-lbl">Show Social Media Section</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div style="margin-top:1.5rem"><button class="a-save" onclick="notify('Settings saved!','ok')">Save Settings</button></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+let adminPw = 'ayra123';
+let waPhone = '923317448054';
+let waMsg = "Hello! I'd like to place an order from Ayra B. Please share details.";
+let socLinks = {insta:'',fb:'',tiktok:'',snap:''};
+let cart = [];
+let editingProdId = null;
+let editingSlideIdx = null;
+let tempImgs = [];
+let currentSlide = 0;
+let slTimer;
+
+let categories = [
+  {name:'All Suits', icon:'👗', count:48},
+  {name:'Lawn Suits', icon:'🌸', count:15},
+  {name:'Chiffon & Silk', icon:'🌙', count:10},
+  {name:'Embroidered', icon:'✨', count:12},
+  {name:'Formal & Party', icon:'💎', count:8},
+  {name:'Winter Suits', icon:'🧣', count:3}
+];
+
+// Pakistani ladies fashion images — actual suit/fashion photos
+let slides = [
+  {
+    title:'Luxury Lawn Collection 2025',
+    desc:'Discover our finest Pakistani lawn suits — crafted for elegance, comfort and timeless beauty.',
+    btn:'Shop Lawn Suits', catKey:'Lawn', tag:'New Arrival 2025',
+    img:'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=1400&q=90'
+  },
+  {
+    title:'Embroidered Masterpieces',
+    desc:'Every stitch tells a story. Exclusive embroidered collections for every special occasion.',
+    btn:'Shop Embroidered', catKey:'Embroidered', tag:'Premium Embroidery',
+    img:'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=1400&q=90'
+  },
+  {
+    title:'Glamorous Party & Formal Wear',
+    desc:'From weddings to grand events — our party wear ensures you are always the most elegant.',
+    btn:'Shop Party Wear', catKey:'Formal', tag:'Party & Formal Wear',
+    img:'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=1400&q=90'
+  },
+  {
+    title:'Light & Flowing Chiffon Suits',
+    desc:'Feel the luxury of premium chiffon and silk suits — perfect for summer and evening events.',
+    btn:'Shop Chiffon', catKey:'Chiffon', tag:'Chiffon & Silk',
+    img:'https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=1400&q=90'
+  },
+  {
+    title:'Winter Warmth Collection',
+    desc:'Our khaddar and woolen suits blend tradition with modern elegance for the winter season.',
+    btn:'Shop Winter', catKey:'Winter', tag:'Winter Collection',
+    img:'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=1400&q=90'
+  }
+];
+
+// Product images — ladies in Pakistani suits
+let products = [
+  {id:1, name:'Pink Floral Lawn 3-Piece', cat:'Lawn',
+   imgs:[
+     'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700&q=90',
+     'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=700&q=90',
+     'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=700&q=90'
+   ],
+   badge:'sale', price:'Rs. 2,800', old:'Rs. 3,500', rating:4.8, reviews:32,
+   desc:'A stunning pink floral lawn 3-piece suit with intricate digital print. Premium cotton lawn fabric — perfect for summer. Includes printed dupatta and dyed trousers.',
+   features:['Premium Cotton Lawn','Digital Floral Print','Includes Dupatta','Unstitched 3-Piece'],
+   meta:{Fabric:'Cotton Lawn',Pieces:'3-Piece',Season:'Summer',Delivery:'2-4 Days'}
+  },
+  {id:2, name:'Royal Blue Embroidered Suit', cat:'Embroidered',
+   imgs:[
+     'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=700&q=90',
+     'https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=700&q=90',
+     'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=700&q=90'
+   ],
+   badge:'new', price:'Rs. 5,500', old:'', rating:4.9, reviews:18,
+   desc:'Stunning royal blue embroidered suit with hand-crafted thread work. Heavy embroidery on front and sleeves, paired with chiffon dupatta. Perfect for formal events and weddings.',
+   features:['Heavy Thread Embroidery','Chiffon Dupatta','Embroidered Trouser','Hand Finished'],
+   meta:{Fabric:'Organza',Pieces:'3-Piece',Season:'All Season',Delivery:'3-5 Days'}
+  },
+  {id:3, name:'Mauve Party Chiffon Suit', cat:'Formal',
+   imgs:[
+     'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=700&q=90',
+     'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=700&q=90',
+     'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700&q=90'
+   ],
+   badge:'sale', price:'Rs. 4,200', old:'Rs. 5,000', rating:4.7, reviews:27,
+   desc:'Gorgeous mauve chiffon party suit with pearl embellishments. Flowing chiffon perfect for weddings and evening events. Features delicate neckline work.',
+   features:['Premium Chiffon','Pearl Embellishments','Wedding Perfect','3-Piece Set'],
+   meta:{Fabric:'Chiffon',Pieces:'3-Piece',Season:'All Season',Delivery:'2-4 Days'}
+  },
+  {id:4, name:'Ivory Silk Dupatta Collection', cat:'Chiffon',
+   imgs:[
+     'https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=700&q=90',
+     'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=700&q=90',
+     'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=700&q=90'
+   ],
+   badge:'new', price:'Rs. 3,800', old:'', rating:4.6, reviews:14,
+   desc:'Timeless ivory silk collection with luxuriously soft fabric that drapes beautifully. Comes with printed silk dupatta and plain trousers. Elegant day-to-evening style.',
+   features:['Pure Silk Fabric','Printed Dupatta','Light & Breathable','Versatile Style'],
+   meta:{Fabric:'Pure Silk',Pieces:'2-Piece',Season:'Spring/Summer',Delivery:'2-3 Days'}
+  },
+  {id:5, name:'Sage Green Digital Print Lawn', cat:'Lawn',
+   imgs:[
+     'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=700&q=90',
+     'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700&q=90',
+     'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=700&q=90'
+   ],
+   badge:'sale', price:'Rs. 2,200', old:'Rs. 2,800', rating:4.5, reviews:41,
+   desc:'Fresh sage green digital print lawn — modern and trendy for daily wear. Soft cotton ensures all-day comfort with a matching printed chiffon dupatta.',
+   features:['Soft Cotton Lawn','Digital Print','Chiffon Dupatta','Daily Wear'],
+   meta:{Fabric:'Cotton Lawn',Pieces:'3-Piece',Season:'Summer',Delivery:'2-4 Days'}
+  },
+  {id:6, name:'Camel Khaddar Winter 3-Piece', cat:'Winter',
+   imgs:[
+     'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=700&q=90',
+     'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=700&q=90',
+     'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=700&q=90'
+   ],
+   badge:'new', price:'Rs. 3,200', old:'', rating:4.8, reviews:9,
+   desc:'Cozy camel khaddar 3-piece for winter. Premium khaddar provides warmth with an elegant look. Features embroidered detailing on neckline and cuffs.',
+   features:['Premium Khaddar','Embroidered Neckline','Winter Warmth','Classic Design'],
+   meta:{Fabric:'Pure Khaddar',Pieces:'3-Piece',Season:'Winter',Delivery:'3-4 Days'}
+  }
+];
+
+let allRevs = {
+  1:[{n:'Ayesha K.',d:'May 2025',r:5,t:'Absolutely beautiful suit! The quality is outstanding and color exactly as shown. Very happy!'},
+     {n:'Sana M.',d:'April 2025',r:5,t:'Ordered for Eid — perfect! Fast delivery and well packaged. Will definitely order again!'},
+     {n:'Fatima R.',d:'March 2025',r:4,t:'Lovely print and very soft fabric. Great value for money.'}],
+  2:[{n:'Nadia A.',d:'May 2025',r:5,t:'The embroidery work is exquisite! Wore to a wedding and received so many compliments.'},
+     {n:'Hira B.',d:'April 2025',r:5,t:'Premium quality, beautiful detailing. Exactly as described. Highly recommend Ayra B.!'}],
+  3:[{n:'Zara T.',d:'May 2025',r:5,t:'Perfect party wear. Chiffon is so soft and the color is stunning!'},
+     {n:'Maha S.',d:'April 2025',r:4,t:'Beautiful suit, slightly large sizing. Otherwise absolutely gorgeous!'}],
+  4:[{n:'Sadia N.',d:'May 2025',r:5,t:'Luxurious silk fabric, feels so premium. Perfect for formal events.'}],
+  5:[{n:'Aroha K.',d:'May 2025',r:5,t:'Love the sage green color! Perfect for everyday wear, so comfortable.'},
+     {n:'Komal P.',d:'April 2025',r:4,t:'Nice print and good quality. Matches website photos perfectly.'}],
+  6:[{n:'Rida M.',d:'April 2025',r:5,t:'Best khaddar suit I have bought! Very warm and embroidery is so neat.'}]
+};
+
+// Category tile images
+let catImgs = {
+  'All Suits':'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500&q=85',
+  'Lawn Suits':'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=85',
+  'Chiffon & Silk':'https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=500&q=85',
+  'Embroidered':'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500&q=85',
+  'Formal & Party':'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=500&q=85',
+  'Winter Suits':'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=500&q=85'
+};
+
+// ===== HELPERS =====
+function starStr(r){let s='';for(let i=0;i<5;i++)s+=i<Math.floor(r)?'★':'☆';return s;}
+function priceNum(p){return parseInt((p||'').replace(/[^0-9]/g,''))||0;}
+function sTo(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function goHome(){showPage('mainPage');}
+function notify(msg,type){const n=document.getElementById('notif');n.textContent=msg;n.className='notif show '+(type||'info');setTimeout(()=>n.className='notif',3400);}
+
+// ===== SLIDER =====
+function buildSlider(){
+  const track=document.getElementById('slTrack');
+  const dots=document.getElementById('slDots');
+  track.innerHTML='';dots.innerHTML='';
+  slides.forEach((sl,i)=>{
+    const div=document.createElement('div');
+    div.className='sl-slide';
+    div.innerHTML=`<img src="${sl.img}" alt="${sl.title}" loading="${i===0?'eager':'lazy'}" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#2D1B35,#5C2D5C)'">
+      <div class="sl-grad"></div>
+      <div class="sl-text">
+        <span class="sl-tag">${sl.tag}</span>
+        <h1>${sl.title}</h1>
+        <p>${sl.desc}</p>
+        <div class="sl-btns">
+          <button class="sl-btn-p" onclick="filterCat('${sl.catKey}')">${sl.btn}</button>
+          <button class="sl-btn-o" onclick="openWA('')">&#128519; WhatsApp Order</button>
+        </div>
+      </div>`;
+    track.appendChild(div);
+    const d=document.createElement('div');
+    d.className='sl-dot'+(i===0?' on':'');
+    d.onclick=()=>goSlide(i);
+    dots.appendChild(d);
+  });
+  clearInterval(slTimer);
+  slTimer=setInterval(()=>chSlide(1),4500);
+}
+function chSlide(dir){currentSlide=(currentSlide+dir+slides.length)%slides.length;updSlide();clearInterval(slTimer);slTimer=setInterval(()=>chSlide(1),4500);}
+function goSlide(i){currentSlide=i;updSlide();clearInterval(slTimer);slTimer=setInterval(()=>chSlide(1),4500);}
+function updSlide(){
+  document.getElementById('slTrack').style.transform=`translateX(-${currentSlide*100}%)`;
+  document.querySelectorAll('.sl-dot').forEach((d,i)=>d.className='sl-dot'+(i===currentSlide?' on':''));
+}
+
+// ===== RENDER PRODUCTS =====
+function renderProds(filter='All'){
+  const g=document.getElementById('prodGrid');
+  g.innerHTML='';
+  products.filter(p=>filter==='All'||p.cat===filter).forEach(p=>{
+    const d=document.createElement('div');
+    d.className='pcard';
+    d.dataset.cat=p.cat;
+    d.innerHTML=`
+      <div class="pcard-img">
+        <img src="${p.imgs[0]}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/400x340/F5ECD9/B8935A?text=${encodeURIComponent(p.name)}'">
+        <span class="pbadge ${p.badge==='sale'?'pb-sale':'pb-new'}">${p.badge==='sale'?'Sale':'New'}</span>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">${p.name}</div>
+        <div class="pcard-cat">${p.cat} Collection</div>
+        <div class="pstars"><span class="stars">${starStr(p.rating)}</span><span class="scount">${p.rating} (${p.reviews} reviews)</span></div>
+        <div class="pprices"><span class="pc">${p.price}</span>${p.old?`<span class="po">${p.old}</span>`:''}</div>
+        <div class="pbtns">
+          <button class="btn-cart" onclick="event.stopPropagation();addToCart(${p.id})">&#128722; Add to Cart</button>
+          <button class="btn-fav" onclick="event.stopPropagation();togFav(this)">&#9825;</button>
+        </div>
+      </div>`;
+    d.onclick=()=>openDetail(p.id);
+    g.appendChild(d);
+  });
+}
+
+// ===== RENDER CATEGORIES =====
+function renderCats(){
+  const g=document.getElementById('catGrid');
+  g.innerHTML='';
+  categories.forEach(c=>{
+    const key=c.name==='All Suits'?'All':c.name.includes('Chiffon')?'Chiffon':c.name.includes('Formal')?'Formal':c.name.split(' ')[0];
+    const img=catImgs[c.name]||'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500&q=85';
+    const d=document.createElement('div');
+    d.className='cat-tile';
+    d.innerHTML=`<img src="${img}" alt="${c.name}" loading="lazy" onerror="this.src='https://placehold.co/300x270/F5ECD9/B8935A?text=${encodeURIComponent(c.name)}'">
+      <div class="cat-overlay"></div>
+      <div class="cat-txt"><h3>${c.name}</h3><span>${c.count} items</span></div>
+      <button class="cat-shop-btn" onclick="event.stopPropagation();filterCat('${key}')">Shop Now</button>`;
+    d.onclick=()=>filterCat(key);
+    g.appendChild(d);
+  });
+}
+
+function filterCat(key){
+  renderProds(key);
+  goHome();
+  setTimeout(()=>sTo('prods'),120);
+}
+
+// ===== CART =====
+function addToCart(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  const ex=cart.find(x=>x.id===id);
+  if(ex){ex.qty++;}else{cart.push({id:p.id,name:p.name,price:p.price,img:p.imgs[0],cat:p.cat,qty:1});}
+  updCartUI();
+  notify('✓ '+p.name+' added to cart!','ok');
+}
+function removeFromCart(id){cart=cart.filter(x=>x.id!==id);updCartUI();}
+function updCartUI(){
+  const count=cart.reduce((a,c)=>a+c.qty,0);
+  ['cartCount','cartCount2'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent=count;el.style.display=count>0?'flex':'none';}
+  });
+  const items=document.getElementById('cartItems');
+  const footer=document.getElementById('cartFooter');
+  if(cart.length===0){
+    items.innerHTML=`<div class="cart-empty"><div style="font-size:52px;margin-bottom:1rem">&#128722;</div><div style="font-size:15px;font-weight:600;margin-bottom:.4rem">Your cart is empty</div><div style="font-size:13px">Browse our collection and add your favourite suits!</div></div>`;
+    footer.style.display='none';
+  } else {
+    const total=cart.reduce((a,c)=>a+priceNum(c.price)*c.qty,0);
+    items.innerHTML=cart.map(c=>`<div class="citem">
+      <img src="${c.img}" alt="${c.name}" onerror="this.src='https://placehold.co/70x80/F5ECD9/B8935A?text=Suit'">
+      <div class="citem-info">
+        <div class="citem-name">${c.name}</div>
+        <div class="citem-cat">${c.cat} Collection${c.qty>1?' &times; '+c.qty:''}</div>
+        <div class="citem-price">${c.price}</div>
+      </div>
+      <button class="citem-del" onclick="removeFromCart(${c.id})">&#215;</button>
+    </div>`).join('');
+    document.getElementById('cartTotal').textContent='Rs. '+total.toLocaleString();
+    footer.style.display='block';
+  }
+}
+function openCart(){
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartDrawer').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ===== WHATSAPP CHECKOUT — BEAUTIFUL MESSAGE =====
+function checkoutWA(){
+  if(cart.length===0)return;
+  const total=cart.reduce((a,c)=>a+priceNum(c.price)*c.qty,0);
+  let msg = '🌸 *New Order — Ayra B. Ladies Suits* 🌸\n';
+  msg += '━━━━━━━━━━━━━━━━━━━━\n\n';
+  msg += '🛍️ *Order Details:*\n\n';
+  cart.forEach((c,i)=>{
+    const itemTotal = priceNum(c.price)*c.qty;
+    msg += `${i+1}. *${c.name}*\n`;
+    msg += `   📁 Category: ${c.cat} Collection\n`;
+    msg += `   💰 Price: ${c.price}`;
+    if(c.qty>1) msg += ` × ${c.qty} = Rs. ${itemTotal.toLocaleString()}`;
+    msg += '\n\n';
+  });
+  msg += '━━━━━━━━━━━━━━━━━━━━\n';
+  msg += `💎 *Total Amount: Rs. ${total.toLocaleString()}*\n`;
+  msg += '━━━━━━━━━━━━━━━━━━━━\n\n';
+  msg += '📦 Please confirm availability and share delivery details.\n\n';
+  msg += 'Thank you for shopping at *Ayra B.*! ✨';
+  window.open('https://wa.me/'+waPhone+'?text='+encodeURIComponent(msg),'_blank');
+}
+
+function openWA(txt){
+  let msg;
+  if(txt){
+    msg = '🌸 *Order Inquiry — Ayra B. Ladies Suits* 🌸\n';
+    msg += '━━━━━━━━━━━━━━━━━━━━\n\n';
+    msg += '🛍️ *Product:* '+txt+'\n\n';
+    msg += 'Please confirm availability and share payment details.\n\n';
+    msg += 'Thank you! ✨';
+  } else {
+    msg = waMsg;
+  }
+  window.open('https://wa.me/'+waPhone+'?text='+encodeURIComponent(msg),'_blank');
+}
+
+// ===== PRODUCT DETAIL =====
+function openDetail(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  document.getElementById('detBread').textContent=p.name;
+  document.getElementById('detName').textContent=p.name;
+  document.getElementById('detCatTag').textContent=p.cat+' Collection';
+  const badge=document.getElementById('detBadge');
+  badge.textContent=p.badge==='new'?'New Arrival':'On Sale';
+  badge.style.cssText=`background:${p.badge==='new'?'#F5ECD9':'#FEE2E2'};color:${p.badge==='new'?'#7A5C2E':'#B91C1C'}`;
+  document.getElementById('detStars').textContent=starStr(p.rating);
+  document.getElementById('detRc').textContent=`(${p.reviews} reviews)`;
+  document.getElementById('detPrice').textContent=p.price;
+  document.getElementById('detOld').textContent=p.old||'';
+  document.getElementById('detDesc').textContent=p.desc;
+  document.getElementById('detFeats').innerHTML=p.features.map(f=>`<div class="det-feat"><div class="feat-dot"></div>${f}</div>`).join('');
+  document.getElementById('detMeta').innerHTML=Object.entries(p.meta).map(([k,v])=>`<div class="dm"><span>${k}</span><strong>${v}</strong></div>`).join('');
+  const mi=document.getElementById('mainImg');
+  mi.src=p.imgs[0];
+  mi.onerror=()=>mi.src='https://placehold.co/600x480/F5ECD9/B8935A?text='+encodeURIComponent(p.name);
+  document.getElementById('thumbRow').innerHTML=p.imgs.map((img,i)=>`<img class="thumb ${i===0?'on':''}" src="${img}" loading="lazy" onclick="selThumb(this,'${img}')" onerror="this.style.display='none'">`).join('');
+  document.getElementById('detCartBtn').onclick=()=>addToCart(id);
+  document.getElementById('detWaBtn').onclick=()=>{
+    let msg='🌸 *Order Inquiry — Ayra B. Ladies Suits* 🌸\n';
+    msg+='━━━━━━━━━━━━━━━━━━━━\n\n';
+    msg+=`🛍️ *Product:* ${p.name}\n`;
+    msg+=`📁 *Category:* ${p.cat} Collection\n`;
+    msg+=`💰 *Price:* ${p.price}${p.old?' (Was: '+p.old+')':''}\n\n`;
+    msg+='Please confirm availability and share payment/delivery details.\n\n';
+    msg+='Thank you! ✨';
+    window.open('https://wa.me/'+waPhone+'?text='+encodeURIComponent(msg),'_blank');
+  };
+  const revs=allRevs[id]||[];
+  document.getElementById('revList').innerHTML=revs.length?revs.map(r=>`<div class="rcard"><div class="rtop"><span class="rname">${r.n}</span><span class="rdate">${r.d}</span></div><div class="rstars">${starStr(r.r)}</div><div class="rtxt">${r.t}</div></div>`).join(''):'<div style="color:var(--mut);font-size:14px;padding:1rem 0">No reviews yet. Be the first to review!</div>';
+  const rel=products.filter(x=>x.cat===p.cat&&x.id!==id).slice(0,4);
+  document.getElementById('relGrid').innerHTML=rel.map(r=>`
+    <div class="pcard" onclick="openDetail(${r.id})">
+      <div class="pcard-img">
+        <img src="${r.imgs[0]}" alt="${r.name}" loading="lazy" onerror="this.src='https://placehold.co/300x200/F5ECD9/B8935A?text=Suit'" style="height:200px">
+        <span class="pbadge ${r.badge==='sale'?'pb-sale':'pb-new'}">${r.badge==='sale'?'Sale':'New'}</span>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name" style="font-size:16px">${r.name}</div>
+        <div class="pstars"><span class="stars">${starStr(r.rating)}</span></div>
+        <div class="pprices"><span class="pc">${r.price}</span>${r.old?`<span class="po">${r.old}</span>`:''}</div>
+        <div class="pbtns"><button class="btn-cart" onclick="event.stopPropagation();addToCart(${r.id})">&#128722; Add to Cart</button></div>
+      </div>
+    </div>`).join('');
+  showPage('detPage');
+  window.scrollTo(0,0);
+}
+function selThumb(el,src){
+  const mi=document.getElementById('mainImg');
+  mi.style.opacity='.4';
+  setTimeout(()=>{mi.src=src;mi.style.opacity='1';},150);
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+}
+function toggleWish(btn){const on=btn.textContent.includes('Remove');btn.textContent=on?'♡ Add to Wishlist':'♥ Remove from Wishlist';notify(on?'Removed from wishlist':'Added to wishlist ♥',on?'info':'ok');}
+function togFav(btn){const on=btn.textContent==='♥';btn.textContent=on?'♡':'♥';notify(on?'Removed from wishlist':'Added to wishlist ♥',on?'info':'ok');}
+
+// ===== SOCIAL =====
+function goSoc(p){const url=socLinks[p];if(url)window.open(url,'_blank');else notify('Add '+p+' link in Admin Panel → Social Media','info');}
+
+// ===== ADMIN =====
+function chkPw(){
+  const v=document.getElementById('pwIn').value;
+  const err=document.getElementById('pwErr');
+  if(v===adminPw){document.getElementById('pwIn').value='';err.style.display='none';showPage('adminPage');renderAdminProds();renderAdminCats();renderSlideAdmin();}
+  else{err.style.display='block';}
+}
+function logout(){showPage('loginPage');}
+function aTab(btn,tab){
+  document.querySelectorAll('.a-nav').forEach(i=>i.classList.remove('on'));btn.classList.add('on');
+  document.querySelectorAll('.a-panel').forEach(t=>t.classList.remove('on'));document.getElementById(tab).classList.add('on');
+  if(tab==='tProds')renderAdminProds();
+  if(tab==='tCats')renderAdminCats();
+  if(tab==='tSlide')renderSlideAdmin();
+}
+
+function renderAdminProds(){
+  const g=document.getElementById('adminProdGrid');
+  if(!g)return;
+  g.innerHTML='';
+  products.forEach(p=>{
+    const d=document.createElement('div');
+    d.className='pmcard';
+    d.innerHTML=`<img src="${p.imgs[0]}" alt="${p.name}" onerror="this.src='https://placehold.co/200x130/F5ECD9/B8935A?text=Suit'">
+      <div class="pmcard-info">
+        <div class="pmcard-name">${p.name}</div>
+        <div class="pmcard-price">${p.price}</div>
+        <div class="pmcard-btns">
+          <button class="pm-edit" onclick="openEditProd(${p.id})">Edit</button>
+          <button class="pm-del" onclick="delProd(${p.id})">Delete</button>
+        </div>
+      </div>`;
+    g.appendChild(d);
+  });
+}
+function delProd(id){products=products.filter(p=>p.id!==id);renderAdminProds();renderProds();notify('Product deleted!','info');}
+function openAddProduct(){
+  editingProdId=null;tempImgs=[];
+  document.getElementById('modalTitle').textContent='Add New Product';
+  ['mName','mPrice','mOld','mDesc'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('mBadge').value='new';
+  const cs=document.getElementById('mCat');
+  cs.innerHTML=categories.filter(c=>c.name!=='All Suits').map(c=>`<option value="${c.name.includes('Chiffon')?'Chiffon':c.name.includes('Formal')?'Formal':c.name.split(' ')[0]}">${c.name}</option>`).join('');
+  document.getElementById('mImgPrev').innerHTML='';
+  document.getElementById('editModal').classList.add('open');
+}
+function openEditProd(id){
+  const p=products.find(x=>x.id===id);if(!p)return;
+  editingProdId=id;tempImgs=[...p.imgs];
+  document.getElementById('modalTitle').textContent='Edit Product';
+  document.getElementById('mName').value=p.name;
+  document.getElementById('mPrice').value=p.price;
+  document.getElementById('mOld').value=p.old||'';
+  document.getElementById('mDesc').value=p.desc;
+  document.getElementById('mBadge').value=p.badge;
+  const cs=document.getElementById('mCat');
+  cs.innerHTML=categories.filter(c=>c.name!=='All Suits').map(c=>{
+    const key=c.name.includes('Chiffon')?'Chiffon':c.name.includes('Formal')?'Formal':c.name.split(' ')[0];
+    return `<option value="${key}" ${key===p.cat?'selected':''}>${c.name}</option>`;
+  }).join('');
+  renderImgPrev();
+  document.getElementById('editModal').classList.add('open');
+}
+function renderImgPrev(){
+  document.getElementById('mImgPrev').innerHTML=tempImgs.map((img,i)=>`
+    <div class="img-prev-item">
+      <img src="${img}" onerror="this.src='https://placehold.co/75x80/F5ECD9/B8935A?text=Img'">
+      <button class="img-prev-del" onclick="removeImg(${i})">&#215;</button>
+    </div>`).join('');
+}
+function removeImg(i){tempImgs.splice(i,1);renderImgPrev();}
+function handleImgUpload(e){
+  Array.from(e.target.files).forEach(f=>{
+    const r=new FileReader();
+    r.onload=ev=>{tempImgs.push(ev.target.result);renderImgPrev();};
+    r.readAsDataURL(f);
+  });
+  e.target.value='';
+}
+function saveProduct(){
+  const name=document.getElementById('mName').value.trim();
+  const price=document.getElementById('mPrice').value.trim();
+  if(!name||!price){notify('Please fill name and price!','err');return;}
+  const data={name,price,old:document.getElementById('mOld').value.trim(),cat:document.getElementById('mCat').value,badge:document.getElementById('mBadge').value,desc:document.getElementById('mDesc').value.trim(),imgs:tempImgs.length>0?tempImgs:['https://placehold.co/400x340/F5ECD9/B8935A?text='+encodeURIComponent(name)],rating:4.5,reviews:0,features:['Premium Quality','Elegant Design','Great Value'],meta:{Fabric:'Premium',Pieces:'3-Piece',Season:'All Season',Delivery:'3-5 Days'}};
+  if(editingProdId){
+    const idx=products.findIndex(p=>p.id===editingProdId);
+    if(idx>=0)products[idx]={...products[idx],...data};
+    notify('Product updated!','ok');
+  } else {
+    data.id=Date.now();products.push(data);allRevs[data.id]=[];
+    notify('Product added!','ok');
+  }
+  closeModal();renderAdminProds();renderProds();
+}
+function closeModal(){document.getElementById('editModal').classList.remove('open');}
+
+function renderSlideAdmin(){
+  const l=document.getElementById('slideAdminList');if(!l)return;
+  l.innerHTML='';
+  slides.forEach((sl,i)=>{
+    const d=document.createElement('div');d.className='slide-a-item';
+    d.innerHTML=`<img src="${sl.img}" alt="${sl.title}" onerror="this.style.display='none'">
+      <div class="slide-a-info"><div class="slide-a-title">${sl.title}</div><div class="slide-a-sub">${sl.tag} — Links to ${sl.catKey}</div></div>
+      <button class="slide-edit-btn" onclick="openSlideEdit(${i})">Edit</button>`;
+    l.appendChild(d);
+  });
+}
+function openSlideEdit(i){
+  editingSlideIdx=i;const sl=slides[i];
+  document.getElementById('sTitle').value=sl.title;
+  document.getElementById('sDesc').value=sl.desc;
+  document.getElementById('sBtnTxt').value=sl.btn;
+  const cs=document.getElementById('sCatLink');
+  cs.innerHTML=categories.filter(c=>c.name!=='All Suits').map(c=>{const key=c.name.includes('Chiffon')?'Chiffon':c.name.includes('Formal')?'Formal':c.name.split(' ')[0];return`<option value="${key}" ${key===sl.catKey?'selected':''}>${c.name}</option>`;}).join('');
+  document.getElementById('sCurImg').innerHTML=`<img src="${sl.img}" style="width:100%;height:90px;object-fit:cover;border-radius:10px;margin-bottom:.4rem" onerror="this.style.display='none'">`;
+  document.getElementById('slideModal').classList.add('open');
+}
+function handleSlideImg(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    slides[editingSlideIdx].img=ev.target.result;
+    document.getElementById('sCurImg').innerHTML=`<img src="${ev.target.result}" style="width:100%;height:90px;object-fit:cover;border-radius:10px;margin-bottom:.4rem">`;
+  };
+  r.readAsDataURL(f);
+}
+function saveSlide(){
+  if(editingSlideIdx===null)return;
+  slides[editingSlideIdx].title=document.getElementById('sTitle').value;
+  slides[editingSlideIdx].desc=document.getElementById('sDesc').value;
+  slides[editingSlideIdx].btn=document.getElementById('sBtnTxt').value;
+  slides[editingSlideIdx].catKey=document.getElementById('sCatLink').value;
+  buildSlider();renderSlideAdmin();closeSlideModal();notify('Slide updated!','ok');
+}
+function closeSlideModal(){document.getElementById('slideModal').classList.remove('open');editingSlideIdx=null;}
+
+function renderAdminCats(){
+  const l=document.getElementById('aCatList');if(!l)return;l.innerHTML='';
+  categories.forEach((c,i)=>{
+    const d=document.createElement('div');d.className='cat-row-a';
+    d.innerHTML=`<span>${c.icon} ${c.name}</span><span style="font-size:11px;color:var(--mut)">${c.count} items</span><button class="del-btn" onclick="delCat(${i})">Delete</button>`;
+    l.appendChild(d);
+  });
+}
+function addCat(){
+  const n=document.getElementById('nCatName').value.trim();
+  const ic=document.getElementById('nCatIco').value.trim()||'👗';
+  if(!n){notify('Please enter category name!','err');return;}
+  categories.push({name:n,icon:ic,count:0});
+  document.getElementById('nCatName').value='';document.getElementById('nCatIco').value='';
+  renderAdminCats();renderCats();notify(n+' category added!','ok');
+}
+function delCat(i){const n=categories[i].name;categories.splice(i,1);renderAdminCats();renderCats();notify(n+' deleted!','info');}
+
+function savePhone(){
+  waPhone=document.getElementById('aPhone').value.replace(/[^0-9]/g,'');
+  waMsg=document.getElementById('aMsg').value;
+  document.getElementById('ctaPhone').textContent=document.getElementById('aPhone').value;
+  document.getElementById('fPhone').textContent=document.getElementById('aPhone').value;
+  notify('WhatsApp settings saved!','ok');
+}
+function saveOffer(){
+  document.getElementById('offerTxt').innerHTML=document.getElementById('aOfferTxt').value;
+  document.querySelector('.offer-bar').style.background=document.getElementById('aOfferClr').value;
+  notify('Offer updated!','ok');
+}
+function saveSoc(){
+  socLinks.insta=document.getElementById('sInsta').value;
+  socLinks.fb=document.getElementById('sFb').value;
+  socLinks.tiktok=document.getElementById('sTt').value;
+  socLinks.snap=document.getElementById('sSn').value;
+  notify('Social links saved!','ok');
+}
+function changePw(){
+  const o=document.getElementById('oPw').value;
+  const n1=document.getElementById('nPw1').value;
+  const n2=document.getElementById('nPw2').value;
+  if(o!==adminPw){notify('Current password incorrect!','err');return;}
+  if(n1.length<4){notify('Password must be at least 4 characters!','err');return;}
+  if(n1!==n2){notify('Passwords do not match!','err');return;}
+  adminPw=n1;['oPw','nPw1','nPw2'].forEach(id=>document.getElementById(id).value='');
+  notify('Password changed successfully!','ok');
+}
+
+// INIT
+buildSlider();
+renderProds();
+renderCats();
+updCartUI();
+</script>
+</body>
+</html>
